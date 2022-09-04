@@ -17,10 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_04_202221) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
-    t.bigint "creator_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["creator_id"], name: "index_categories_on_creator_id"
+    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "category_spends", force: :cascade do |t|
@@ -33,12 +33,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_04_202221) do
   end
 
   create_table "spends", force: :cascade do |t|
-    t.bigint "spender_id", null: false
+    t.bigint "user_id", null: false
     t.string "name"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spender_id"], name: "index_spends_on_spender_id"
+    t.index ["user_id"], name: "index_spends_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,8 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_04_202221) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "categories", "users", column: "creator_id"
+  add_foreign_key "categories", "users"
   add_foreign_key "category_spends", "categories"
   add_foreign_key "category_spends", "spends"
-  add_foreign_key "spends", "users", column: "spender_id"
+  add_foreign_key "spends", "users"
 end

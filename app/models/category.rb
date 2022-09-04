@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
-  belongs_to :creator, class_name: :User, foreign_key: :creator_id
+  belongs_to :user
   has_many :spends, through: :category_spends
 
-  # validates :name, presence: true, null: false
+  validates :name, presence: true
 end

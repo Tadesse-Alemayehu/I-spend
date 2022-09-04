@@ -9,8 +9,8 @@
 user_one=User.create!(name: "tadesse alemayehu")
 puts "user created #{user_one}"
 
-spend_one=Spend.create!(name: 'spend by user one', spender: user_one, amount: 200)
-category_one=Category.create!(creator: user_one, name: 'MC donald')
+spend_one=Spend.create!(name: 'spend by user one', user: user_one, amount: 200)
+category_one=Category.create!(user: user_one, name: 'MC donald')
 
 puts "category created"
 CategorySpend.create!(spend: spend_one, category: category_one)
