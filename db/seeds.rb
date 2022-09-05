@@ -9,6 +9,21 @@
 admin=User.create!(name: "tadesse alemayehu", email: 'admin@gmail.com', password: '123456')
 user_one=User.create!(name: "tadesse alemayehu", email: 'user@gmail.com', password: '123456')
 
-spend_one=Spend.create!(name: 'spend by user one', user: user_one, amount: 200)
+category_one=Category.create!(user: admin, name: 'MC donald')
+category_two=Category.create!(user: admin, name: 'Tomocka')
+category_three=Category.create!(user: admin, name: 'Bety shiro')
+
+
 category_one=Category.create!(user: user_one, name: 'MC donald')
+category_two=Category.create!(user: user_one, name: 'Tomocka')
+category_three=Category.create!(user: user_one, name: 'Bety shiro')
+
+spend_one=Spend.create!(name: 'spend by user one 1', user: user_one, amount: 100)
 CategorySpend.create!(spend: spend_one, category: category_one)
+spend_two=Spend.create!(name: 'spend by user one 2', user: user_one, amount: 270)
+CategorySpend.create!(spend: spend_two, category: category_one)
+CategorySpend.create!(spend: spend_two, category: category_two)
+spend_three=Spend.create!(name: 'spend by admin 1', user: admin, amount: 320)
+CategorySpend.create!(spend: spend_three, category: category_one)
+CategorySpend.create!(spend: spend_three, category: category_two)
+CategorySpend.create!(spend: spend_three, category: category_three)
