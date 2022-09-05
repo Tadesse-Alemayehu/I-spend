@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
   def index
-    # list all categories foar a user
+    @categories=current_user.categories.order(created_at: :DESC)
   end
 
   def new
