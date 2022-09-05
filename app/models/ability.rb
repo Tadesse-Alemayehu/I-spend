@@ -7,8 +7,8 @@ class Ability
     # Define abilities for the user here. For example:
     #
       return unless user.present?
-      can :manaeg, Category, user: user
-      can :manaeg, Spend, user: user
+      can :manage, Category, user: user
+      can :manage, Spend, user: user
       return unless user.admin?
       can :manage, :all
     #
