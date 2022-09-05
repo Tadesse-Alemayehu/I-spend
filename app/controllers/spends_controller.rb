@@ -1,7 +1,6 @@
-class CategoriesController < ApplicationController
+class SpendsController < ApplicationController
   before_action :authenticate_user!
   def index
-    # list all categories foar a user
   end
 
   def new
