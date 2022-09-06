@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :spends
   has_many :categories
 
-  # validates :name, presence: true
+  validates :name, presence: true
 
   def admin?
     role=='admin'
