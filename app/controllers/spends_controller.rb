@@ -8,6 +8,8 @@ class SpendsController < ApplicationController
   end
 
   def new
+    @new_transaction=Spend.new
+    @categories=current_user.categories.order(created_at: :DESC)
   end
 
   def create

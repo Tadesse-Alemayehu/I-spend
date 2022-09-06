@@ -1,3 +1,16 @@
 <h1>Spends#new</h1>
-<p>Find me in app/views/spends/new.html.erb</p>
+
+<%= form_with model: @new_transaction, url: user_spends_path(:user_id => current_user)  do |form| %>
+  <%= form.label :name, "Transaction name"%>
+  <%= form.text_field :name , required: true%>
+  <%= form.label :amount, "Spend on/amount" %>
+  <%= form.text_field :amount , required: true%>
+  <%= form.label :category, "Select your categories" %>
+  <% @categories.each do |category| %>
+    <%= check_box("category",  {:multiple => true}, category.id, category.name)%>
+  <%= form.label :category, category.name%>
+  <% end %>
+  <%= form.submit %>
+<% end %>
+
 <%= render :partial => '/users/home' %>
