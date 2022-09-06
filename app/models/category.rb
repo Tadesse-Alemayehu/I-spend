@@ -8,4 +8,8 @@ class Category < ApplicationRecord
   def total_spend
      self.spends.reduce(0) {|sum, spend| sum+spend.amount}
   end
+
+  def formatted_date
+    Date.parse(self.created_at.to_s)
+  end
 end
