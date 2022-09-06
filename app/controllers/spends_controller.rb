@@ -13,11 +13,27 @@ class SpendsController < ApplicationController
   end
 
   def create
-    puts "params are "
-    puts params
+    par=transaction_params
+    puts 'params are'
+    if !params[:category]
+      redirect_to new_user_spend_path(user_id: current_user), notice: "you have to set atleast one category"
+      return
+    end
+    spend=Spend.new(name: par[:name],amount: par[:amount], user: current_user)
+   if spend.save
+    params[:category][:selects].each do |id|
+    CategorySpend.create(spend: spend,category: Category.find(id))
+    end
+    redirect_to users_path
+   else
+    render :new
+   end
   end
 
   def destroy
   end
   private
+  def transaction_params
+    params.require(:spend).permit(:name, :amount)
+  end
 end
