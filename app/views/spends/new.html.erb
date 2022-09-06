@@ -4,10 +4,10 @@
   <%= form.label :name, "Transaction name"%>
   <%= form.text_field :name , required: true%>
   <%= form.label :amount, "Spend on/amount" %>
-  <%= form.text_field :amount , required: true%>
+  <%= form.number_field :amount , required: true%>
   <%= form.label :category, "Select your categories" %>
   <% @categories.each do |category| %>
-    <%= check_box("category",  {:multiple => true}, category.id, category.name)%>
+    <%= check_box('category', "selects",{:multiple => true}, category.id, nil)%>
   <%= form.label :category, category.name%>
   <% end %>
   <%= form.submit %>

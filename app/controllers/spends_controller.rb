@@ -13,6 +13,8 @@ class SpendsController < ApplicationController
   end
 
   def create
+    puts "params are "
+    puts params
   end
 
   def destroy
