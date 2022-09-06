@@ -17,8 +17,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def destroy
-  end
   private
   # strong params
   def strong_category

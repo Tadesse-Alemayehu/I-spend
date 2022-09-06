@@ -30,8 +30,6 @@ class SpendsController < ApplicationController
    end
   end
 
-  def destroy
-  end
   private
   def transaction_params
     params.require(:spend).permit(:name, :amount)
