@@ -5,11 +5,23 @@ class CategoriesController < ApplicationController
   end
 
   def new
+    @new_category=Category.new
   end
 
   def create
+    par=strong_category
+    new_category=Category.new(user: current_user, name: par[:name], icon: par[:icon])
+    if new_category.save
+      redirect_to users_path
+    else render :new
+    end
   end
 
   def destroy
+  end
+  private
+  # strong params
+  def strong_category
+    params.require(:category).permit(:name, :icon)
   end
 end
