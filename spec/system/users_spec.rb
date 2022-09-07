@@ -24,5 +24,20 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content('Welcome! You have signed up successfully.')
       end
     end
+      describe "Test Log In" do
+        before(:each){visit new_user_session_path}
+          it "Assert user access the page with appropriate text" do
+            expect(page).to have_content("Log in")
+      end
+      it 'Assert user is able to Log In with Email, Password' do
+        @user=User.create(name: "Tadesse Alemayehu", email: 'testuser@testuser.com', password: '123456')
+      within('#new_user') do
+        fill_in 'user[email]', with: @user.email
+        fill_in 'user[password]', with: @user.password
+      end
+      click_button('commit')
+      expect(page).to have_content('Add new category')
+    end
+      end
 
 end
