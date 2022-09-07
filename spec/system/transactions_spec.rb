@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Categories", type: :system do
-    describe "test description" do
+RSpec.describe "Spends", type: :system do
       before(:each) do
         visit new_user_session_path
         @user=@user=User.create(name: "tadesse alemayehu", email: 'testuser@testuser.com', password: '123456')
@@ -14,12 +13,10 @@ RSpec.describe "Categories", type: :system do
       click_button('commit')
         visit user_categories_path(:user_id => @user)
       end
-      
-      it "User can see a list of all categories" do
-          @categories.each do |category|
-            expect(page).to have_content(category.name)
-          end
-      end
-      
+
+  describe "test a list of transaction are displayed for a category" do 
+    it "Assert all transaction for a category are displayed" do
+
     end
+  end
 end
