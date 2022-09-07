@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+body {
+  max-width: 465px;
+  margin: auto;
+  font-family: "Domine", serif;
+  text-align: center;
+}
+
+button {
+  border-radius: 10px;
+}
+.success {
+  background-color: rgb(25, 124, 0);
+  color: white;
+}
+.info {
+  background-color: rgb(1, 23, 94);
+  color: white;
+}
+.none {
+  background-color: silver;
+  color: black;
+}
+
+button.full {
+  width: 100%;
+  padding: 2vh;
+  border: 2px solid white;
+}
+
+.home-page .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-page .buttons {
+  position: fixed;
+  bottom: 2vw;
+  width: 100%;
+}

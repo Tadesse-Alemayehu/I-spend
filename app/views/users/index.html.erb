@@ -1,3 +1,7 @@
-<h1>Welcome, this is I spend</h1>
-<%= button_to 'Log In', new_user_session_path, method: :get %>
-<%= button_to 'Register', new_user_registration_path, method: :get %>
+<div class="home-page">
+<h1 class="title">Welcome <br/> To <br/> I-spend</h1>
+<div class="buttons">
+<%= button_to 'Log In', new_user_session_path, method: :get, class: "full info" %>
+<%= button_to 'Register', new_user_registration_path, method: :get, class: "full none" %>
+</div>
+</div>
