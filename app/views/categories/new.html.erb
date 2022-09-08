@@ -1,0 +1,9 @@
+<h1>Create new category</h1>
+<%= form_with model: @new_category, url: user_categories_path(:user_id => current_user)  do |form| %>
+  <%= form.label :name, "Category name"%>
+  <%= form.text_field :name , required: true%>
+  <%= form.label :icon, "Icon for this category" %>
+  <%= form.text_field :icon , required: true%>
+  <%= form.submit class: "full success" %>
+<% end %>
+<%= render :partial => '/users/home' %>

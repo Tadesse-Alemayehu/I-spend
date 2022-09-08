@@ -1,0 +1,21 @@
+<div class="home-page categories">
+  <% if !@categories.empty? %>
+  <div class="banner">
+ <h3 class="sub-title">This are list of your categories</h3>
+</div>
+ <% @categories.each do |category| %>
+ <%= link_to user_category_spends_path(:category_id => category), class: "list-card", method: :get  do%>
+  <div class="img"><img src="<%= category.icon%>" alt="<%= category.name%>"/></div>
+  <div class="mid"><div class="heading">
+    <%= category.name%></div><div class="sub-topic"><%= category.formatted_date%>
+    </div></div>
+  <div class="right"><div class="content"></div>$<%= category.total_spend%></div>
+ <%end%>
+ <% end %>
+  <% else %>
+ <h3 class="sub-title">You have no categories, Pleas add one</h3>
+<% end %>
+
+<%= button_to 'Add new category', new_user_category_path, method: :get,class: "full success"  %>
+<%= button_to 'logout', destroy_user_session_path, method: :delete, class: "full danger"  %>
+</div>
