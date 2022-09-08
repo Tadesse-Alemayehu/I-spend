@@ -1,7 +1,7 @@
 <div class="home-page">
   <div class="banner">
   <h3 class="left"><%= @category.name%></h3>
-  <div class="right"><%= @category.total_spend%></div>
+  <div class="right">$<%= @category.total_spend%></div>
 </div>
 <% if !@transactions.empty? %>
  <title class="heading">This are list of your categories</title>
