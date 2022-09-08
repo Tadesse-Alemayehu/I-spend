@@ -1,0 +1,24 @@
+<div class="home-page">
+  <div class="banner">
+  <h3>Register new transaction</h3>
+</div>
+
+<%= form_with model: @new_transaction, url: user_spends_path(:user_id => current_user)  do |form| %>
+  <%= form.label :name, "Transaction name"%>
+  <%= form.text_field :name , required: true%>
+  <%= form.label :amount, "Spend on/amount" %>
+  <%= form.number_field :amount , required: true%>
+  <div class="checkbox-list">
+    <h3>Select your categories</h3>
+  <% @categories.each do |category| %>
+  <div class="checkbox-with-label">
+    <%= check_box('category', "selects",{:multiple => true}, category.id, nil)%>
+  <%= form.label :category, category.name %><br/>
+  </div>
+  <% end %>
+  </div>
+  <%= form.submit class: "full success"%>
+<% end %>
+
+<%= render :partial => '/users/home' %>
+</div>
