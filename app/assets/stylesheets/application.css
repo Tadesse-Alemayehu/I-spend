@@ -42,26 +42,57 @@ body {
     color: black;
   }
 
-  button.full {
+  .full {
     width: calc(100% - 4px - 2vh);
     padding: 2vh;
     border: 2px solid white;
   }
 
-  .home-page .title {
+  .home-page .title-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .home-page .title {
+    font-size: 2rem;
+  }
+
   .home-page .buttons {
     position: fixed;
     bottom: 2vw;
     width: 100%;
-    margin: auto;
+  }
+
+  .home-page.login input[type="email"],
+  .home-page.login input[type="password"] {
+    width: 90%;
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid green;
+    border-radius: 5px;
+  }
+
+  .home-page .field {
+    margin: 10px;
   }
 
   .home-page .buttons button {
     margin: auto;
+  }
+  .home-page.login a {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: silver;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: rgb(1, 23, 94);
+    color: white;
   }
 }
