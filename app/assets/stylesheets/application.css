@@ -111,4 +111,12 @@ body {
   .categories .list-card .mid .sub-topic {
     color: silver;
   }
+  .back {
+    display: flex;
+    margin-left: 3vw;
+    align-items: center;
+  }
+  .back .html-icon {
+    font-size: 2.5rem;
+  }
 }
