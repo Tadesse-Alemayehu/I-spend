@@ -12,10 +12,9 @@
  <%end%>
  <% end %>
   <% else %>
- <title class="heading">You have no categories, Pleas add one</title>
+ <h3 class="sub-title">You have no categories, Pleas add one</h3>
 <% end %>
 
-<%= button_to 'Add new category', new_user_category_path, method: :get %>
-<%= button_to 'logout', destroy_user_session_path, method: :delete %>
-<p>Find me in app/views/categories/index.html.erb</p>
+<%= button_to 'Add new category', new_user_category_path, method: :get,class: "full success"  %>
+<%= button_to 'logout', destroy_user_session_path, method: :delete, class: "full danger"  %>
 </div>

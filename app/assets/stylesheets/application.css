@@ -17,6 +17,10 @@ body {
     background-color: rgb(25, 124, 0);
     color: white;
   }
+  .danger {
+    background-color: rgb(201, 0, 77);
+    color: white;
+  }
   .info {
     background-color: rgb(1, 23, 94);
     color: white;
@@ -80,5 +84,31 @@ body {
     text-decoration: none;
     background-color: rgb(1, 23, 94);
     color: white;
+  }
+
+  .categories .list-card {
+    border: 2px solid green;
+    /* display: block; */
+    max-width: 85%;
+    margin: 10px auto;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+  }
+  .categories .list-card .img {
+    max-width: 25vw;
+  }
+  .categories .list-card .img img {
+    max-width: 100%;
+  }
+  .categories .list-card .mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .categories .list-card .mid .sub-topic {
+    color: silver;
   }
 }
