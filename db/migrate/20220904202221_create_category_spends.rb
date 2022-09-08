@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCategorySpends < ActiveRecord::Migration[7.0]
   def change
     create_table :category_spends do |t|
