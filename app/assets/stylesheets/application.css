@@ -86,7 +86,7 @@ body {
     color: white;
   }
 
-  .categories .list-card {
+  .list-card {
     border: 2px solid green;
     /* display: block; */
     max-width: 85%;
@@ -97,18 +97,18 @@ body {
     text-decoration: none;
     color: black;
   }
-  .categories .list-card .img {
+  .list-card .img {
     max-width: 25vw;
   }
-  .categories .list-card .img img {
+  .list-card .img img {
     max-width: 100%;
   }
-  .categories .list-card .mid {
+  .list-card .mid {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .categories .list-card .mid .sub-topic {
+  .list-card .mid .sub-topic {
     color: silver;
   }
   .back {

@@ -5,4 +5,8 @@ class Spend < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, presence: true, comparison: { greater_than: 0 }
+
+  def formatted_date
+    Date.parse(self.created_at.to_s)
+  end
 end
