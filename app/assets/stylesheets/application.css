@@ -55,7 +55,8 @@ body {
 
   input[type="email"],
   input[type="password"],
-  input[type="text"] {
+  input[type="text"],
+  input[type="number"] {
     width: 90%;
     margin: 5px auto;
     padding: 5px;
@@ -126,5 +127,13 @@ body {
     justify-content: space-between;
     padding: 0 3vw;
     align-items: center;
+    margin-bottom: 2vh;
+  }
+  .checkbox-list {
+    width: max-content;
+    margin: 3vh auto;
+  }
+  .checkbox-with-label {
+    text-align: left;
   }
 }
