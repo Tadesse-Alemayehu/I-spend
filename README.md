@@ -65,6 +65,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to all our code reviewers and partners at Microverse.
+- [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for providing the original design.
 
 ## 📝 License
 
