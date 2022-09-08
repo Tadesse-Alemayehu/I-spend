@@ -108,7 +108,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  .list-card .mid .sub-topic {
+  .list-card .sub-topic {
     color: silver;
   }
   .back {
@@ -118,5 +118,13 @@ body {
   }
   .back .html-icon {
     font-size: 2.5rem;
+  }
+  .banner {
+    color: black;
+    box-shadow: 5px 5px 5px silver;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    align-items: center;
   }
 }
