@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+
 html,
 body {
   margin: 0;
   padding: 0;
 }
+
 @media screen and (max-width: 465px) {
   body {
     font-family: "Domine", serif;
@@ -13,18 +15,22 @@ body {
   button {
     border-radius: 5px;
   }
+
   .success {
     background-color: rgb(25, 124, 0);
     color: white;
   }
+
   .danger {
     background-color: rgb(201, 0, 77);
     color: white;
   }
+
   .info {
     background-color: rgb(1, 23, 94);
     color: white;
   }
+
   .none {
     background-color: silver;
     color: black;
@@ -73,13 +79,13 @@ body {
   .home-page .buttons button {
     margin: auto;
   }
+
   .home-page.login a,
   .home-page.sign-up a {
     display: block;
     width: 90%;
     margin: 5px auto;
     padding: 5px;
-    background-color: silver;
     font-size: 1.2rem;
     border-radius: 5px;
     text-decoration: none;
@@ -89,6 +95,7 @@ body {
 
   .list-card {
     border: 2px solid green;
+
     /* display: block; */
     max-width: 85%;
     margin: 10px auto;
@@ -98,30 +105,37 @@ body {
     text-decoration: none;
     color: black;
   }
+
   .list-card .img {
     max-width: 25vw;
     max-height: 25vw;
   }
+
   .list-card .img img {
     max-width: 100%;
     max-height: 100%;
   }
+
   .list-card .mid {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   .list-card .sub-topic {
     color: silver;
   }
+
   .back {
     display: flex;
     margin-left: 3vw;
     align-items: center;
   }
+
   .back .html-icon {
     font-size: 2.5rem;
   }
+
   .banner {
     color: black;
     box-shadow: 5px 5px 5px silver;
@@ -131,10 +145,12 @@ body {
     align-items: center;
     margin-bottom: 2vh;
   }
+
   .checkbox-list {
     width: max-content;
     margin: 3vh auto;
   }
+
   .checkbox-with-label {
     text-align: left;
   }
