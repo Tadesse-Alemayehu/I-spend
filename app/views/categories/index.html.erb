@@ -1,7 +1,8 @@
 <div class="home-page categories">
   <% if !@categories.empty? %>
+  <div class="banner">
  <h3 class="sub-title">This are list of your categories</h3>
-
+</div>
  <% @categories.each do |category| %>
  <%= link_to user_category_spends_path(:category_id => category), class: "list-card", method: :get  do%>
   <div class="img"><img src="<%= category.icon%>" alt="<%= category.name%>"/></div>
