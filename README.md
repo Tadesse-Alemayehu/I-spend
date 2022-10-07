@@ -7,6 +7,9 @@
 - ROR
 - Postgresql
 
+## Screen shot
+![mobile](https://user-images.githubusercontent.com/69077061/194612625-8e19bc36-9674-4a96-9649-98039c4aa9e1.PNG)
+
 ## Getting Started
 
 0.0 make sure to install ruby on your machine.
